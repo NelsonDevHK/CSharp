@@ -6,7 +6,7 @@ namespace Project_1
         public static void Main (string[] args) 
         {
 
-            Console.WriteLine ("Hello World!");
+            Console.WriteLine ("test connect to git!");
             Console.ReadKey ();
         }
     }
