@@ -8,14 +8,17 @@ namespace Project_1
         {
             int[] arr = { 3, 3, 2, 1, 3, 2, 1};
          int temp;
-         for (int j = 0; j <= arr.Length - 2; j++) {
-            for (int i = 0; i <= arr.Length - 2; i++) {
-               if (arr[i] > arr[i + 1]) {
-                  temp= arr[i + 1];
-                  arr[i + 1] = arr[i];
-                  arr[i] = temp;
-               }
-            }
+         for( int i =0 ; i <= arr.Length -2; i++)
+         {
+             for (int j = 0; j <= arr.Length -2 ; j++)
+             {
+                 if(arr[j] > arr [j+1])
+                 {
+                     temp = arr[j];
+                     arr[j] = arr[j+1];
+                     arr[j+1] = temp;
+                 }
+             }
          }
          Console.WriteLine("Sorted:");
          foreach (int p in arr)
