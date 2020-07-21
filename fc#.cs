@@ -6,23 +6,23 @@ namespace Project_1
      {
         public static void Main (string[] args) 
         {
-            int[] arr = { 3, 3, 2, 1, 3, 2, 1};
-         int temp;
+            int[] arr = {4, 7, 1 ,-3, 2};
+         bool equal = false;
+         int required = Convert.ToInt32(Console.ReadLine());
+         Console.WriteLine("the number sum" +required);
+         Console.WriteLine();
          for( int i =0 ; i <= arr.Length -2; i++)
          {
-             for (int j = 0; j <= arr.Length -2 ; j++)
+             for(int j = i ; j <= arr.Length -2 ;j++)
              {
-                 if(arr[j] > arr [j+1])
-                 {
-                     temp = arr[j];
-                     arr[j] = arr[j+1];
-                     arr[j+1] = temp;
-                 }
+                 if(arr[i] + arr [j+1] == required)
+                  {
+                      equal = true;
+                    }
              }
          }
-         Console.WriteLine("Sorted:");
-         foreach (int p in arr)
-            Console.Write(p + " ");
+         Console.WriteLine("Return: ");
+            Console.WriteLine(equal + " ");
          Console.Read();
  
         }
